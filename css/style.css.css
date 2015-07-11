@@ -1,5 +1,7 @@
 body {
-	color: #f5f5f5;
-	background-color: #4682B4;
+	color: white;
+}
 
+h1, h3, p {
+	background-color: green;
 }
