@@ -69,7 +69,7 @@
       /* rgba syntax (255,255,255,1)*/
     }
     li {
-      /*display: inline; */
+      display: inline; 
       padding: 0px 20px 0px 20px;
       border-radius: 0px;
     }
