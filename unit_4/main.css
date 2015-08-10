@@ -7,28 +7,31 @@
 
  body {
       font-family: "News706BT-RomanC",Georgia;
+      color: #303030;
       /*THIS IS THE GA BODY FONT*/
       /*font-family: Verdana, Geneva, sans-serif;*/
       /*SECOND FONT IS WHAT USED ON WDI ADM ASSIGNM*/
     }
-    p {
-      color: #303030;
-      font-family: "News706BT-RomanC",Georgia;
-      /*THIS IS THE GA BODY FONT*/
+
     }
     header {
       text-align: center;
-      background: url('http://dash.ga.co/assets/anna-bg.png');
+      background: url("images/bridge_background.png");
       background-size: cover;
       color: white;
+      text-transform: uppercase;
+      text-decoration: none;
+      line-height: 1;
     }
-    a:link {
+
+    header a:link, a:visited {
       text-decoration: none;
       color: #FFFFFF;
     }
-    /*a:visited {
+
+    header a:hover {
       color: #D3D3D3;
-    }*/
+   
 
     /*OSWALD IS THE FONT FROM THE AVENUE SQUARESPACE TEMPLATE. I GOT IT FROM GOOGLE FONTS */
     h1, h2, h3, h4, h5, h6 {
@@ -38,7 +41,7 @@
       line-height: 1;
     }
 
-    h1 {
+    /*h1 {
       font-size: 50px;
       /*font-family: Impact, Charcoal, sans-serif;
       font-weight: normal; */
@@ -50,6 +53,15 @@
       border-radius: 103px;
     }
 
+
+
+
+
+
+
+
+
+
     /*
     #portfolio {
       margin: 10px 30px 15px 0px;
@@ -60,6 +72,8 @@
       max-width: 200px;
     */
 
+
+/*
     }
     .background-color {
       background: #ececec;
@@ -68,8 +82,7 @@
     ul {
       padding: 10px;
       background: rgba(0,0,0,0.5);
-      /*a is the transparency */
-      /* rgba syntax (255,255,255,1)*/
+   
     }
     li {
       display: inline; 
@@ -79,11 +92,7 @@
     #adam {
         font-size: 72px;
         text-align: left;
-    }
-     #nav {   /*not sure why won't color menu??*/
-      /*font-family: "PFDinTextCompProBold",Impact,Arial;*/
-      font-size: 30px;
-      color: #FFFFFF;
+
     }
     #slogan {
       font-size: 18px;
@@ -125,7 +134,7 @@
 
 
 
-    /* TAKEN STUFF FROM TREEHOUSE UL GALLERY */
+    /* TAKEN STUFF FROM TREEHOUSE UL GALLERY 
 img {
   max-width: 100%;
 }
@@ -136,7 +145,7 @@ img {
   padding: 0 5%; 
 }
 
-/*  PAGE PORTFOLIO **********************/
+/*  PAGE PORTFOLIO **********************
 
 #gallery { 
   margin: 0;
@@ -162,3 +171,5 @@ img {
 #gallery img {
   border-radius: 0px;
 }
+
+*/
