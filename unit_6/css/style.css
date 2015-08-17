@@ -1,0 +1,71 @@
+
+body {
+	font-family: 'News Cycle', sans-serif;
+	max-width: 960px;
+	margin: auto;
+}
+h1, h2, h3 {
+	font-family: 'Signika', sans-serif;
+	border-bottom: 10px solid #FFD800;
+	display: inline-block;
+	margin-bottom: .35em;
+}
+
+nav {
+	float: right;
+}
+nav a {
+	font-size: 1.25em;
+	text-decoration: none;
+	margin: 1em;
+	display: inline-block;
+	padding: 6px 10px;
+	
+}
+nav a:hover {
+	background: #ECECEC;
+}
+#tagline {
+	clear: both;
+	margin-top: 1px;
+}
+/*section div {
+	display: inline-block;
+}*/
+
+#gallery div {
+	float: left;
+	width: 30%; /*WHY ONLY 2 COLUMNS??? */
+	margin: .6%;
+	text-align: center;
+}
+
+#post div {
+	float: left;
+	width: 47%; /*WHY ONLY 2 COLUMNS??? */
+	margin: 1%;
+}
+
+#gallery img, #post img {
+	max-width: 100%;
+	padding-top: 0px;
+	margin-top: 0px;
+}
+#gallery p {
+	margin-top: 1px;
+}
+footer {
+	background: #ECECEC;
+	text-align: center;
+	clear: both;
+}
+footer p {
+	display: inline-block;
+	margin: 1em;
+
+}
+
+
+
+
+
