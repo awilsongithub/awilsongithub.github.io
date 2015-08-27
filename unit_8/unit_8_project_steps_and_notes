@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<head>
+</head>
+
+<body>
+</body>
+
+</html>
+
+@media only screen and (max-width: 800px;) {
+	nav {
+		float: none;
+	}
+
+	nav a {
+		margin: 0 1.6em .75em 0;
+	}
+	img {
+		width: 320px;
+	}
+}
+
+UNIT 8 PROJECT
+Before MAKE RESPONSIVE, FINISH DESKTOP SITE
+use mockups and hallacher unit 6 + unit 4 build
+tweak prev build to mockup design
+nav bkgrnd from unit4
+nav 1/line center at smart L
+unit 4 bkgrnd img repl mockup img
+about me white bkgrnd
+work grey bkgrnd hallacher divs
+contact - wht bkgrnd
+footer - see hand mockups
+download and look at ELK code challenge ex.
+"set viewport tag in head = ?" 
+@media 768px, 480px, 320px
+ID elements that need to respond, give em %s
+define fonts in ems
+sync
+ipadpeek.com test > screenshots > email > mentor
+submit
+sched 1:1
