@@ -139,9 +139,6 @@ section {
   float: left;
   background-color: red;
 }*/
-/*#gallery {  THIS DIDN'T WORK....???
-  background-image: url("images/workspace.jpg");
-}*/
 #gallery div {
   float: left;
   width: 22.5%; /*WHY ONLY 2 COLUMNS??? */
@@ -152,10 +149,6 @@ section {
 #gallery div img {
   width: 100%;
 }
-/*#gallery a:hover {  DIDN'T WORK????
-  border-style: solid 4px;
-  border-color: #FBD334;
-}*/
 #gallery h1 {
   display: inline-block;
 }
