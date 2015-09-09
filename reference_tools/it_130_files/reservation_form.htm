@@ -1,0 +1,88 @@
+<html>
+<head>
+	<title>Adam Wilson's Assignment 3</title>
+</head>
+
+<body style="background-color:CCFFFF">
+<img src="images/airplane.jpg"  width="300" height="150" alt="picture of an airplane" />
+<h1 style="font-size:200%; font-family:Arial; font-weight: bold; color:#0000CC">Biofuels Aboard Airlines</h1>
+
+<p style="font-family: Arial; color: # 000099">
+<form  name="reservation" style="border-style: solid; border-width: 5px; border-color:#003399; padding:10;">
+	Last Name: <br />
+	<input type="text"  name="txtLastName" /><br />
+	First Name: <br />
+	<input type="text"  name="txtFirstName" /><br />
+	
+	Number of people travelling:
+	<select name="selNumberTravelling">
+		<option value="1">1</option>
+		<option value="2">2</option>
+		<option value="3">3</option>
+		<option value="4">4</option>
+		<option value="5">5</option>
+		<option value="6">6</option>
+		<option value="7">7</option>
+		<option value="8">8</option>
+	</select><br /><br />
+
+	Arrival City: 
+	<select name="selArrivalCity">
+		<option value="1">New York</option>
+		<option value="2">Atlanta</option>
+		<option value="3">Los Angeles</option>
+	</select><br /><br />
+
+	Number of Days: 
+	<select name="selNumberOfDays">
+		<option value="3">3</option>
+		<option value="4">4</option>
+		<option value="5">5</option>
+		<option value="6">6</option>
+		<option value="7">7</option>
+	</select><br /><br />
+
+	<a href="http://www.timeanddate.com/calendar/?year=2010&country=1"
+	target="_blank"  name="2010_calendar">
+	Click here to see a 2010 Calendar </a><br /><br />
+
+	Departure Date:
+	<select name="selDepartureMonth">
+		<option value="1">January</option>
+		<option value="2">February</option>
+		<option value="3">March</option>
+		<option value="4">April</option>
+		<option value="5">May</option>
+		<option value="6">June</option>
+		<option value="7">July</option>
+		<option value="8">August</option>
+		<option value="9">September</option>
+		<option value="10">October</option>
+		<option value="11">November</option>
+		<option value="8">December</option>
+	</select>
+	<select name="selDepartureDay">
+		<option value="31">31</option>
+	</select><br /><br />
+
+	Please Check All That Apply: <br />
+	First Class Ticket: <input type="checkbox"  name="chkFirstClassTicket" /><br />
+	Travelling with Pet: <input type="checkbox" name="chkPet" /><br /><br />
+
+	Comments: <br />
+	<textarea name="txtarComments"  cols="25"  rows="5" ></textarea><br /><br />
+
+	Once you click submit, you are agreeing to book this vacation with our <br />
+	company and your credit card will be charged. Do you agree? <br />
+	I agree: <input type="radio" name="radAgree" value="agrees" checked="checked" /><br />
+	I disagree: <input type="radio" name="radAgree" value="disagrees" /><br /><br />
+
+	<input type="submit"  name="btnSubmit"  value="Book My Ticket" />
+	<input type="reset" /><br />
+
+</form>
+</p>
+
+<h3 style="font-family: Arial; color:#000099">"Fly With Us!"</h3>
+</body>
+</html>

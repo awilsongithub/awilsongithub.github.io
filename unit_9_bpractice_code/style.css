@@ -1,0 +1,272 @@
+/* TOP OF THE FUNNEL CODE...........
+BROAD BRUSH STROKES.............. 
+SECTIONS, BODY, DIVS, .......... */
+
+
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+  font-family: 'News Cycle', sans-serif;
+}
+section {
+  padding: 1em;
+}
+section {
+  background: #202020;
+  color: white;
+  overflow: auto;
+}
+header {
+      background-image: url("images/workspace.jpg");
+      background-size: cover;
+      color: white;
+      text-align: center;
+}
+nav {
+  font-size: 1.3em;
+  float: right;
+}
+
+footer {
+  text-align: center;
+  border-top: .06em solid black;
+  padding: 1.1em 0;
+  margin-top: 2.5em;
+  clear: both;
+  background-color: #202020;
+  color: white;
+}
+
+
+/* MID-FUNNEL... STANDARD ELEMENTS
+ANCHORS, LISTS, HEADINGS.......... */
+
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+h1, h2, h3 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  border-bottom: 4px solid #FBD334;
+  display: inline-block;
+}
+h1 {
+  font-size: 2em;
+}
+h2 {
+  font-size: 1.5em;
+  padding: .75em 0;
+  color: #fffebb;
+  border-bottom-color: #fffebb;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+li {
+  float:left;
+  font-size: 1.25em;
+  width: 50%;
+  height: 100px;
+  outline: .125em solid #222222;
+  text-align: center;
+  line-height: 100px;
+  color: black;
+  background: white;
+}
+
+
+/*CLASS AND ID BASED SECTIONS .....
+COVERING LARGER AREAS, MULTIPLE ELEMENTS...*/
+
+#menu {
+  background-color: red;
+  color: blue;
+}
+#welcome {
+  font-size: 4em;
+  text-align: center;
+  border-bottom: none;
+  /*min-height: 5em;*/
+}
+#about {
+  width: 60%;
+  display: inline-block;
+  /*padding: 1em;*/
+} 
+#aboutsection, #contact {
+  padding-top: 2em;
+  padding-bottom: 2em;
+  background-color: #e0e0e0;
+  color: black;  
+}
+#aboutsection {
+  width: 80%;
+  margin: auto;
+}
+#gallery div {
+  float: left;
+  width: 22.5%; /*WHY ONLY 2 COLUMNS??? */
+  margin: 1%;
+  text-align: center;
+  line-height: 1.5em;
+}
+/*#about div {
+  width: 40%;
+  margin: 1em 5em;
+  float: left;
+  background-color: red;
+}*/
+
+
+
+/* SMALLER ITEMS IN THE FUNNEL
+IMAGES, BUTTONS, ANCHOR ELEMENTS */
+
+
+a:hover {
+  color: #e0e0e0;
+}
+.button {
+  background-color: #FBD334;
+  font-size: 1.5em;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1em;
+  border-bottom: none;
+}
+#adam {
+  float: left;
+}
+nav a {
+  text-decoration: none;
+  color: #ffffff;
+  margin: 30px;
+  display: inline-block;
+}
+#hero {
+  background: #fffebb;
+}
+#imageadam {
+  width: 150px;
+  border: 7px solid white;
+  border-radius: 50%;
+  margin-top: 2em;
+  float: right;
+  display: inline-block;
+}
+#gallery div img {
+  width: 100%;
+}
+#gallery h1 {
+  display: inline-block;
+}
+#contact img {
+  padding-right: .5em;
+}
+#contact a {
+  color: #000000;
+}
+
+
+
+/* MEDIA QUERIES. THESE COULD BE IN A SEPARATE
+CSS FILE TO BREAK CODE INTO MANAGEABLE CHUNKS
+AND SO I CAN REFERENCE MAIN CSS FILE WHILE
+WRITING MODIFICATIONS.................*/
+
+
+@media only screen and (max-width: 800px) {
+  nav {
+    float: none;
+  }	
+  #aboutsection {
+  width: 100%;
+  }
+  nav a {
+      margin: 0 1.6em .75em 0;
+  }
+ /* img {
+  	width: 320px;
+  }*/
+  /*#about {
+  	font-size: 1.4em;
+    line-height: 1.8em;
+  }*/
+}
+
+@media only screen and (max-width: 500px) {
+  h1, nav {
+  	display: block;
+    text-align: center;
+  }
+  #aboutsection {
+  width: 100%;
+  }
+  nav a {
+  	margin: 0 .5em;
+  }
+ /* img {
+  	width: 230px;
+  }*/
+  section, div {
+  	width: 100%;
+    padding: .6em;
+  }
+  #services, #about {
+  	float: none;
+    width: 100%;
+    padding-bottom: .5em;
+  }
+
+  #aboutsection {
+  padding-top: 0em;
+  padding-bottom: 0em;
+  }
+  
+  #imageadam {
+  width: 100%;
+ /* float: right;*/
+  }
+  #imageadam img {
+    width: 150px;
+    border: 7px solid white;
+    border-radius: 50%;
+    margin-top: 3em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #gallery div {
+    float: left;
+    width: 40%; /*WHY ONLY 2 COLUMNS??? */
+    margin: 1%;
+    text-align: center;
+  }
+  h2 {
+  	font-size: 1em;
+    display: inline;
+  }
+  p, ul {
+  	margin: 1.8em .6em 0;
+  }
+  li {
+  	width: 80%;
+    outline-width: .5em;
+    padding: .5em;
+    height: 2em;
+    line-height: 2em;
+  }
+  #welcome {
+    font-size: 2.5em;
+  }
+
+}
+
+
+
