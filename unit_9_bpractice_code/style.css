@@ -32,7 +32,7 @@ footer {
   text-align: center;
   border-top: .06em solid black;
   padding: 1.1em 0;
-  margin-top: 2.5em;
+  /*margin-top: 2.5em;*/
   clear: both;
   background-color: #202020;
   color: white;
@@ -127,6 +127,7 @@ COVERING LARGER AREAS, MULTIPLE ELEMENTS...*/
   float: left;
   width: 22.5%; /*WHY ONLY 2 COLUMNS??? */
   margin: 1%;
+  margin-bottom: 3em;
   text-align: center;
   line-height: 1.5em;
 }
@@ -284,15 +285,21 @@ WRITING MODIFICATIONS.................*/
   }
   #imageadam {
     margin-top: 1em;
+    margin-bottom: 3em;
     margin-left: auto;
     margin-right: auto;
     display: block;
+    float: none;
  /* float: right;*/
   }
   #imageadam img {
     width: 150px;
     border: 7px solid white;
     border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    float: none;
     /*margin-top: 3em;
     display: block;
     margin-left: auto;
