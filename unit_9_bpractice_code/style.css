@@ -9,12 +9,10 @@ body {
   font-family: 'News Cycle', sans-serif;
 }
 section {
-  padding: 1em;
-}
-section {
   background: #202020;
   color: white;
   overflow: auto;
+  padding: 1em;
 }
 header {
       background-image: url("images/workspace.jpg");
@@ -107,7 +105,7 @@ COVERING LARGER AREAS, MULTIPLE ELEMENTS...*/
 }
 #about {
   width: 60%;
-  display: inline-block;
+  float: left;
   /*padding: 1em;*/
 } 
 #aboutsection, #contact {
@@ -154,6 +152,9 @@ CHILD PAGES TOP FUNNEL
   width: 40%; /*WHY ONLY 2 COLUMNS??? */
   margin: 1%;
  /* clear: both;*/
+}
+#post div img { 
+  width: 100%;
 }
 #post h2 {
   text-transform: none;
@@ -212,7 +213,7 @@ nav a {
   border-radius: 50%;
   margin-top: 2em;
   float: right;
-  display: inline-block;
+  /*display: inline-block; don't need this and float*/
 }
 #gallery div img {
   width: 100%;
