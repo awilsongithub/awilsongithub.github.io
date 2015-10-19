@@ -63,9 +63,6 @@ function diceRoll(x) {
     return Math.floor(Math.random() * x) + 1;
 }
 
-
-
-
 //Treehouse: "Making Decisions with Conditional statements" 
 // X done with this (skipped a few).
 
@@ -73,20 +70,7 @@ function diceRoll(x) {
 return //ends function with a usable result
 var local vs global //local better, no dependency on other parts of code
 
-
-
 9/5/15: stopped at start of variable scope video...
-
-
-
-
-
-
-
-
-
-
-
 
 
 //////////////////////////////////////////////////////////////////
@@ -239,7 +223,6 @@ var pieces = {
     'red' : [ 
             [0,0], [0, 2], [0, 4]
             ]  ,
-        
     'black' : [ 
             [0, 1], [5,1], [5,3]
             ] 
