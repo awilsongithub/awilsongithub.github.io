@@ -3,10 +3,19 @@
 /*                     JAVASCRIPT CHEAT SHEET                   */
 //////////////////////////////////////////////////////////////////
 
-/* 
+/*
 Common to explain code file here at top
 Refer to this when solving problems with Javascript
-Taken from stuy of Treehouse and WDI prework JS 
+Taken from stuy of Treehouse and WDI prework JS
+*/
+
+/*
+MISCELANEOUS TIPS
+DEVELOPER.MOZILLA.ORG: TREEHOUSE likes this resource
+WORKSPACES WON'T PREVIEW IN SAFARI, USE CHROME
+DEBUG JS IN CONSOLE OF INSPECT ELEMENT (LISTS SYNTAX ERORRS BY LINE)
+--
+--.....
 */
 
 
@@ -14,10 +23,8 @@ Taken from stuy of Treehouse and WDI prework JS
 /*              TREEHOUSE RAILS TRACK JS NOTES                  */
 //////////////////////////////////////////////////////////////////
 
-//DEVELOPER.MOZILLA.ORG  // TREEHOUSE likes this resource
-
 //CONSOLE COMMANDS
-clear(), 
+clear(),
 
 <script src="scripts.js"></script>//LINK TO Js: SCRIPT SRC LINK BEFORE CLOSING BODY TAG OR IN HEAD
 
@@ -45,7 +52,7 @@ console.log(fName.length); // .LENGTH IS A "PROPERTY" & toLowerCase() is a "meth
 console.log(passphrase.toLowerCase()); //RETURNS LOWERCASE WITHOUT ALTERING VAR VALUE
 
 //Treehouse: "Working with Numbers" ///////////////////////////////////////////
-Math.round(44.9); //= nearest # = 45 .... object methods. 
+Math.round(44.9); //= nearest # = 45 .... object methods.
 Math.floor( Math.random() * 6 ) +1 //dieRoll ... Math.random generates between 0 - .99999
 userNumOne = parseInt(userNumOne); //update value of variable from strings to integers //parseInt(), parseFloat() both chop off non #'s at end of line
 // example: var totalWidth = parseInt(width) * numOfDivs;
@@ -64,29 +71,14 @@ function diceRoll(x) {
 }
 
 
-
-
-//Treehouse: "Making Decisions with Conditional statements" 
+//Treehouse: "Making Decisions with Conditional statements"
 // X done with this (skipped a few).
 
-//Treehouse: "Functions" 
+//Treehouse: "Functions"
 return //ends function with a usable result
 var local vs global //local better, no dependency on other parts of code
 
-
-
 9/5/15: stopped at start of variable scope video...
-
-
-
-
-
-
-
-
-
-
-
 
 
 //////////////////////////////////////////////////////////////////
@@ -94,7 +86,7 @@ var local vs global //local better, no dependency on other parts of code
 //////////////////////////////////////////////////////////////////
 
 
-// "DRY": DON'T REPEAT SAME CODE 2X (USE LOOP ETC)...
+// "DRY": DON'T REPEAT YOURSELF
 // CONTROL FLOW //////////////////////////////
 
 //TERNARY
@@ -125,7 +117,7 @@ switch (dayNumber) { //exceution dependent on value in dayNumber  ie 1-7
 }
 
 //WHILE LOOP//////////////////////////////////
-while (lives > 0) { //until escapes due to F 
+while (lives > 0) { //until escapes due to F
 	gamePlay();
 	lives += 1;
 }
@@ -136,8 +128,27 @@ for (var i = 0; i < x; i +=1) {
 	//maybe lives in a game etc.
 }
 
+//FOR LOOP RANDOMLY DETERMINES RGB # AND ADDS TO THE EMPTY HTML STRING 10 DIVS THEN WRITES IT TO SCREEN
+//COMMON TO DECLARE VARS AT TOP OF SCRIPT
+var html = '';
+function randomRGB() {
+  return Math.floor(Math.random() * 256);
+}
+function randomColor() { //BUILDS CONCATENATED COLOR VAR STRING AND RETURNS IT
+  var color = 'rgb(';
+  color += randomRGB() + ', ';
+  color += randomRGB() + ', ';
+  color += randomRGB() + ')';
+  return color;
+}
+for (i = 1; i <= 10; i++) {
+  html += '<div style="background-color:' + randomColor() + '"></div>';
+}
+document.write(html);
+
+
 //defining a function ///////////////////////////
-function greatest(x,y,z) { 
+function greatest(x,y,z) {
     if ( (x > y) && (x > z) ) {
         return x;
     } else if ( (y > x) && (y > z) ) {
@@ -183,18 +194,18 @@ myFriends.pop(); //removes last element (jim)
 //more array functions here: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
 
 //for unit 6 later array exercise use this code: repl.it/BMA5/3
-function setSquare(player, row, col) { //call it with setSquare('R', 0, 0); 
+function setSquare(player, row, col) { //call it with setSquare('R', 0, 0);
 	checkerboard[0][0] = 'R'; //to put a red piece at top left of board
 }
 function getPieceAt(row, col) { //returns value at that location
 	return checkerboard[row][col];
 }
-//iterate w/ for loop, filling second array
+//iterate w/ for loop, filling second array tempsInC
 for (var i = 0; i < tempsInF.length; i +=1) {
     tempsInC.push(fahrToCelc(tempsInF[i]));
 }
 //map takes each value in 1 array, runs function on it, maps it to corresp. index in 2nd Array
-var newArray = myArray.map(cube); 
+var newArray = myArray.map(cube);
 var newArray = myArray.forEach(cube); //takes values, runs function, prints without mapping
 
 
@@ -215,7 +226,7 @@ function clearBoard() {
 }  //ends clearBoard()
 
 /*
-setUpRed() Explanation  
+setUpRed() Explanation
 rows (r) are the index position of each array
 columns (c) are the index position or each value within each array
 example: checkerboard[r][c] of [0][1] is first array, second position
@@ -235,14 +246,14 @@ function setUpRed() {
 } // ends setUpRed()
 
 //an assoc array with two keys red, black each containing an array of arrays. innermost array are location on board, next is all the locations which is the value for the key red or black next is the assoc array (object) container for this information.
-var pieces = { 
-    'red' : [ 
+var pieces = {
+    'red' : [
             [0,0], [0, 2], [0, 4]
             ]  ,
-        
-    'black' : [ 
+
+    'black' : [
             [0, 1], [5,1], [5,3]
-            ] 
+            ]
 };
 
 ////////END OF CHECKERBOARD ITERATION EXERCISES/////////////////
