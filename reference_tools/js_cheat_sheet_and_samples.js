@@ -254,18 +254,13 @@ var pieces = {
     'red' : [
             [0,0], [0, 2], [0, 4]
             ]  ,
-<<<<<<< HEAD:reference_tools/js_cheat_sheet_samples.js
 
     'black' : [
-=======
-    'black' : [ 
->>>>>>> ba2a1a171da3f440c4a4708211058515f87eac6c:reference_tools/javascript_basics_workspaces_code_&_comments.js
             [0, 1], [5,1], [5,3]
             ]
 };
 
 ////////END OF CHECKERBOARD ITERATION EXERCISES/////////////////
-
 
 
 
