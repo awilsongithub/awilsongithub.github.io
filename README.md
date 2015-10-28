@@ -1,4 +1,33 @@
 # awilsongithub.github.io
-Welcome to my Github Repository.
+# Welcome to my Github Repository.
 
-I'm a web development bootcamp student at General Assembly. I just graduated this year with an Information Systems BA from DePaul. 
+![Adam Wilson](https://github.com/awilsongithub/awilsongithub.github.io/blob/master/unit_9_bpractice_code/images/adam.jpg)
+
+I'm a web development bootcamp student at [General Assembly](https://generalassemb.ly/education/web-development-immersive/chicago). I just graduated this year with an Information Systems BA from DePaul.
+
+### Please Excuse the Mess!
+I'm new to Github and my site isn't the epitome of organization right now.
+
+### Check Out A Few of My Projects:
+* Built from scratch [portfolio site](http://awilsongithub.github.io/unit_9_bpractice_code/)
+* Javascript [rock_paper_scissors.js](https://github.com/awilsongithub/wdi-fundamentals-rps/blob/student/app/js/rockpaperscissors.js)
+...
+
+### Skill Under My Belt
+- [x] HTML
+- [x] CSS
+- [x] Javascript
+- [x] Java
+- [x] C++
+- [x] Webmaster (3 years experience)
+
+### My Near Future Hit List
+- [ ] Ruby
+- [ ] Sinatra
+- [ ] SQL
+- [ ] Node.js
+- [ ] Express.js
+- [ ] MongoDB
+- [ ] Backbone.js
+- [ ] Ruby on Rails
+- [ ] React.js
