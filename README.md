@@ -3,23 +3,24 @@
 
 ![Adam Wilson](https://github.com/awilsongithub/awilsongithub.github.io/blob/master/unit_9_bpractice_code/images/adam.jpg)
 
-I'm a web development bootcamp student at [General Assembly](https://generalassemb.ly/education/web-development-immersive/chicago). I just graduated this year with an Information Systems BA from DePaul.
+I'm a web development bootcamp student at [General Assembly](https://generalassemb.ly/education/web-development-immersive/chicago). I graduated from DePaul University earlier this year with a BA in Information Systems. Before that I worked as an office manager.
 
 ### Please Excuse the Mess!
-I'm new to Github and my site isn't the epitome of organization right now.
+My Github isn't the epitome of organization just yet....
 
 ### Check Out A Few of My Projects:
 * Built from scratch [portfolio site](http://awilsongithub.github.io/unit_9_bpractice_code/)
 * Javascript [rock_paper_scissors.js](https://github.com/awilsongithub/wdi-fundamentals-rps/blob/student/app/js/rockpaperscissors.js)
 ...
 
-### Skill Under My Belt
+### Skills Under My Belt
 - [x] HTML
 - [x] CSS
 - [x] Javascript
 - [x] Java
 - [x] C++
 - [x] Webmaster (3 years experience)
+- [x] Office Manager (10 years experience)
 
 ### My Near Future Hit List
 - [ ] Ruby
