@@ -1,4 +1,4 @@
 # awilsongithub.github.io
-for unit 1 ga wdc
-These are the html and css files for the Unit 1 WDC project. 
-More stuff about this repo....
+Welcome to my Github Repository.
+
+I'm a web development bootcamp student at General Assembly. I just graduated this year with an Information Systems BA from DePaul. 
