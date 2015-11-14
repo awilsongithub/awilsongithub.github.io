@@ -1,0 +1,71 @@
+
+body {
+   margin: 0;
+   font-family: 'Merriweather', serif;
+   font-style: normal;
+   font-weight: 400;
+   background-image: url(../images/film_reels.jpg);
+}
+header {
+
+   width: 98%;
+   height: 50px;
+   color: white;
+   background-color: rgba(25, 26, 15, .9);
+   padding: 15px; /* change to 30 */
+   padding-left: 25px;
+}
+/*.quizArea {
+   width: 40%;
+   float: left;
+   min-height: 400px;
+   color: white;
+   background-color: rgba(95, 151, 209, .8);
+   padding-top: 30px;
+   max-height: 400px;
+
+}*/
+.quizBackground {
+   width: 100%; /*of parent*/
+   min-height: 500px;
+   /*background-color: rgb(47, 49, 179);*/
+   background-color: rgba(25, 26, 15, .6);
+   /*padding: 1em;*/
+   /*margin-top: 1em;*/
+   padding: 1em;
+   font-family: 'Merriweather', serif;
+   color: white;
+   font-weight: bold;
+   font-size: 1.5em;
+   line-height: .6;
+   max-height: 400px;
+   float: left;
+
+}
+form {
+   display: inline-block;
+   font-size: 2em;
+}
+input {
+   font-size: .5em;
+}
+button {
+    font-size: 1em;
+    color: black;
+    background-color: white;
+    font-family:'Limelight', cursive;
+    margin: 0 0 .5em .6em;
+    padding: .05em;
+    padding-left: .5em;
+    padding-right: .5em;
+
+}
+
+h1, h2, h3 {
+   font-family: 'Limelight', cursive;
+   font-style: normal;
+   font-weight: 400;
+}
+header img, header h1 {
+   display: inline-block;
+}

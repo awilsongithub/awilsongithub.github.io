@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+   <head>
+      <meta charset="utf-8">
+      <title>OMDB Quizs</title>
+      <link href='http://fonts.googleapis.com/css?family=Varela|Limelight|Merriweather&v2' rel='stylesheet' type='text/css'>
+      <link rel="stylesheet" href="styles/style.css" media="screen" title="no title" charset="utf-8">
+      <script src="https://maps.googleapis.com/maps/api/js"></script>
+
+   </head>
+<!-- ******************************************** -->
+<!--                  body                        -->
+<!-- ******************************************** -->
+
+   <body>
+
+      <header>
+         <h1>name that movie</h1>
+      </header>
+
+      <div class="quizBackground">
+         <form>
+             <label>
+                 <input type="text" name="formField" placeholder="movie name" />
+             </label>
+         </form>
+         <button id="guessButton">guess</button>
+         <button id="clueButton">clue, please</button>
+      </div>
+
+
+<!-- ******************************************** -->
+<!--                  end body code               -->
+<!-- ******************************************** -->
+
+
+      <!-- SCRIPTS AFTER BODY LOADS -->
+      <!-- JQUERY FIRST SO JS CAN USE IT -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+      <script type="text/javascript" src="scripts/omdbquiz.js"></script>
+
+
+   </body>
+</html>
