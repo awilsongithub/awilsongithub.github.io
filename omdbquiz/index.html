@@ -16,17 +16,45 @@
    <body>
 
       <header>
-         <h1>name that movie</h1>
+         <h1>omdb movie facts</h1>
+         <!-- <h1>name that movie</h1> -->
       </header>
 
       <div class="quizBackground">
-         <form>
-             <label>
-                 <input type="text" name="formField" placeholder="movie name" />
-             </label>
+
+
+<form id="form1" name="form1">
+   <input type="text" id="movieNameInput" name="movieName" value="" placeholder="your movie name">
+   <input type="button" id="getFacts" name="name" value="get movie facts" onclick="yourMovie()">
+</form>
+
+<!-- <script type="text/javascript">
+   function yourMovie() {
+      var yourMovieTitle = document.form1.movieName.value;
+      document.write('your movie title is ' + yourMovieTitle);
+   }
+</script> -->
+
+
+         <!-- <form id='movieNameForm'>
+                 <input id="movieName" type="text" name="formField" placeholder="movie name" />
          </form>
-         <button id="guessButton">guess</button>
-         <button id="clueButton">clue, please</button>
+         <button id="getInfo">get info</button> -->
+
+
+
+
+
+         <!-- <button id="clueButton">clue, please</button> -->
+         <button id="emptyText">new movie</button>
+         <div id="clues">
+            <!-- // dropdown
+            <select id="single">
+              <option>Star Wars</option>
+              <option>Blade Runner</option>
+            </select> -->
+         </div>
+
       </div>
 
 
@@ -37,6 +65,7 @@
 
       <!-- SCRIPTS AFTER BODY LOADS -->
       <!-- JQUERY FIRST SO JS CAN USE IT -->
+
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
       <script type="text/javascript" src="scripts/omdbquiz.js"></script>
 

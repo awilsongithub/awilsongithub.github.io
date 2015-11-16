@@ -14,6 +14,7 @@ header {
    background-color: rgba(25, 26, 15, .9);
    padding: 15px; /* change to 30 */
    padding-left: 25px;
+   font-size: 1.5em;
 }
 /*.quizArea {
    width: 40%;
@@ -25,6 +26,7 @@ header {
    max-height: 400px;
 
 }*/
+
 .quizBackground {
    width: 100%; /*of parent*/
    min-height: 500px;
@@ -37,19 +39,20 @@ header {
    color: white;
    font-weight: bold;
    font-size: 1.5em;
-   line-height: .6;
    max-height: 400px;
    float: left;
 
 }
-form {
+#form1 {
    display: inline-block;
-   font-size: 2em;
+   font-size: 1em;
 }
-input {
-   font-size: .5em;
+#movieNameInput {
+   display: inline-block;
+   font-size: 1em;
+   padding-left: .3em;
 }
-button {
+button, #getFacts {
     font-size: 1em;
     color: black;
     background-color: white;
@@ -58,7 +61,6 @@ button {
     padding: .05em;
     padding-left: .5em;
     padding-right: .5em;
-
 }
 
 h1, h2, h3 {
