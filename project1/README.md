@@ -1,6 +1,6 @@
 #Project #1: Family Finder Game
 
-### Play The Game at: 
+### Play The Game at: http://awilsongithub.github.io/project1/
 
 ###Object of the Game
 Click "Find Some Family!" to find Grogg familiy member names and images. The grandparents, four kids and 7 grandkids are located in various states. Visit their cities, follow the prompts and see them appear as map markers drop on their cities. Visit all 5 families to fill the gameboard with their photos and watch a big group photo appear when "The family's all here!" 
