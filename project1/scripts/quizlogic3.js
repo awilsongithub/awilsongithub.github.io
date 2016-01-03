@@ -133,8 +133,12 @@ families[4] = {
 
          // call function to build family name list and append it and images
          buildNameList(inc);
-
          setMarker(families[inc].lat, families[inc].long);
+
+         //moved here from build name list. works? or move back?
+         quizBackground.append(nameListString);
+         $('#howard').show('slow');
+         playSuccessSound();
 
          inc++;  //
 
@@ -161,7 +165,7 @@ families[4] = {
  // build string to greet each family member using loop
  // loop also appends imgages
  function buildNameList(inc) {
-    nameListString = 'Hello';
+    nameListString = 'Hello ';
     for (var i = 0; i < families[inc].names.length; i++) {
 
           var length = families[inc].names.length;
@@ -181,7 +185,7 @@ families[4] = {
 
 
 
-          $('#howard').show('slow');
+
 
          // call function to show image with inc and i args
          // showImage(inc, i);
@@ -191,7 +195,7 @@ families[4] = {
     } // end for loop
 
     //append string that greets each family member
-    quizBackground.append(nameListString);
+
  }; // end buildNameList
 
 
@@ -204,10 +208,20 @@ function showImage(inc, i) {
    console.log(imageJQuerySelector);
    // show image of name
    $(imageJQuerySelector).show('slow');
+
+
+   // for html
+
+   // for script
+
+
+
 }; // end showImage
 
-
-
+// play media when called
+var playSuccessSound = function () {
+  document.getElementById("successSound").play();
+};
 
 // map code from chicago.js
  var mapCanvas, mapOptions, map;

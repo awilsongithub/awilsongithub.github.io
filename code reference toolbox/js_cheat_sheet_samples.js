@@ -193,7 +193,9 @@ arrayOfArrays [0][0]; //gives first element in first array
 ['a', 'b', 'c'].length; //evals to 3 (helps find last or 2nd to last... element)
 myFriends[myFriends.length - 1]; //evals to 'joe' since length is 2
 myFriends.indexOf('joe'); //evals to 1 (if no match, evals to 0 - 1 = -1)
-myFriends.push('jim'); //adds third friend jim to myFriends index (i) pos. 2
+/////            POP, PUSH, SHIFT, UNSHIFT          ///////////////
+// last item: pop off, push on, first item: shift off, unshift on
+myFriends.push('jim'); //adds third friend jim to myFriends
 myFriends.pop(); //removes last element (jim)
 //more array functions here: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
 
@@ -259,4 +261,78 @@ var pieces = {
             ]
 };
 
-////////END OF CHECKERBOARD ITERATION EXERCISES/////////////////
+///////  END OF CHECKERBOARD ITERATION EXERCISES  /////////
+
+////////////////////////////////////////////////////////////
+///////        OBJECTS, CONSTRUCTORS, AJAX    //////////////
+////////////////////////////////////////////////////////////
+
+// constructor function using parameters and self-reference "this."
+var Band = function(name, members, formed, albums, onTour) {
+   this.name = name;
+   this.members = members;
+   this.dateFormed = formed;
+   this.albums = albums;
+   onTour = false;
+};
+var matisyahu = new Band('Matisyahu', ['Mattew Paul Miller', 'musicians'], 2000, ['Akeda', 'Spark Seeker', 'Light', 'Live at Stubbs'], false);
+
+// a javascript object looks like a hash
+var laptop = {
+   // attributes
+   weight: 'five pounds',
+   screenSize: 15.6,
+   model: 'Macbook Pro',
+   //abilities
+   displayLogin: function() {
+      return "Please enter your password."
+   }
+};
+// AJAX IS A JQUERY METHOD WITH A HASH PARAMETER (KEY:VALUE,)
+$.ajax({
+   url: 'http://www.omdbapi.com/?t=The+Dark+Knight&y=&plot=short&r=json',
+   type: "GET",
+   dataType: 'json',
+   success: function() {
+      var data = data;
+      console.log(data);
+      console.log(data.actors);
+   },
+   error: function() {
+      console.log("error occurred");
+   }
+});
+
+////////////////////////////////////////////////////////////
+///////                                              ///////
+/////    LYNDA.COM JAVASCRIPT ESSENTIAL TRAINING     ///////
+///////                                              ///////
+////////////////////////////////////////////////////////////
+
+//////// CHAPTER 5: WORKING WITH THE DOM   /////////////////
+// ACCESS DOM ELEMENTS (LIKE CSS SELECTORS)
+var homeNav = document.getElementById('homeNav');
+console.log('test');
+console.log(homeNav);
+console.log(homeNav.innerHTML);
+homeNavLinks = homeNav.getElementsByTagName('a'); // array of links
+console.log(homeNavLinks);
+firsthomeNavLink = homeNavLinks[0]; // first element of array
+console.log(firsthomeNavLink.innerHTML);
+// select vanilla element and log inner HTML
+var content = document.getElementById('vanilla');
+console.log(content.innerHTML);
+console.log( $('#strawberry').html() ); // logs html in strawberry w jquery
+
+// CHANGE DOM ELEMENTS (LIKE CSS PROPERTIES AND VALUES)
+mainContent = document.getElementById('mainContent');
+mainContent.setAttribute('align', 'right');
+var
+mainTitle = document.getElementById('mainTitle');
+console.log(mainTitle.innerHTML);
+
+// CREATING DOM ELEMENTS (PLACED RELATIVE TO EXISTING ELEMENTS)
+var newHeading = document.createElement('h1'); // create new ELEMENTS
+var h1Text = document.createTextNode('Adam and Renee Forever'); // createTextNode
+newHeading.appendChild(h1Text); // append TextNode to Element
+document.getElementById('trivia').appendChild(newHeading); // append Element to existing DOM element
