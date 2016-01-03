@@ -1,6 +1,6 @@
 #Project #1: Family Finder Game
 
-### Play The Game at: 
+### Play The Game at: http://awilsongithub.github.io/project1/
 
 ###Object of the Game
 Click "Find Some Family!" to find Grogg familiy member names and images. The grandparents, four kids and 7 grandkids are located in various states. Visit their cities, follow the prompts and see them appear as map markers drop on their cities. Visit all 5 families to fill the gameboard with their photos and watch a big group photo appear when "The family's all here!" 
@@ -22,12 +22,13 @@ Click "Find Some Family!" to find Grogg familiy member names and images. The gra
 
 ###Project Approach and Learnings
 * Skills I wanted to reinforce: jQuery selectors and DOM manipulation. Data retrieval from objects and arrays via API or data internal to my file. Google Maps API. I wanted to expand on the Libary Locator I built in class that did some of the above. 
-* Scope, Logic: Jim and James helped me organize my process. What to work on first and then expand upon. 
+* Scope, Logic: Instructors helped me prioritize my process and features.  
 * BADASAP: Break App Down As Small As Possible.
-* James encouraged me to wireframe it out in advance in detail.
-* James showed my dev tools breakpoints. These helped me track down a variable update bug.
-* Solving logic in a way that works for me.
-* Using comments to plan and document 
+* wireframe it out in advance in detail to envision each piece.
+* Dev tools breakpoints. These helped me track down a variable update bug.
+* CSS refinement using dev tools.
+* Solving logic on paper: in a way that works for me.
+* Solving logic in text editor: Using comments to plan and document 
 * color picking and 
 * Managing multiple files in Atom.
 * v1, v2 to mitigate fear/risk of breaking my code.
