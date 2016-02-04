@@ -336,3 +336,44 @@ var newHeading = document.createElement('h1'); // create new ELEMENTS
 var h1Text = document.createTextNode('Adam and Renee Forever'); // createTextNode
 newHeading.appendChild(h1Text); // append TextNode to Element
 document.getElementById('trivia').appendChild(newHeading); // append Element to existing DOM element
+
+////////////////////////////////////////////////////////////
+///////                                              ///////
+/////    JS AND NODE FUNDAMENTALS YOUTUBE            ///////
+///////                                              ///////
+////////////////////////////////////////////////////////////
+
+// NOde is in enterprise applications.
+// Single-threaded. Multi-threaded server pools of waiting threads and blocks vs. Node server event loop single thread delegating out to async threads, moving on to next right away and as responses come in, callbacks still in the loop execute. The loop ticks and executes each tick. Analogy: Request to Amaz on and I move on, Amazon delegates to vendor and mΩoves on, callback is an error or success-shipped email.
+//
+// NOde Stack is non-JS V8, Event Loop, Async I/O, Std. library in JS and my app.
+
+
+// 2 WAYS TO DECLAR AN OBJECT
+// var obj = new Object
+//	({ answer: 5, question: "what num?" });
+var obj =
+		{ answer: 5, question: 'what num?'};
+//
+// var div = document.getElementById('showSpace');
+var hElement = document.createElement('h1');
+var hText = document.createTextNode(obj['question']);
+// same as obj.question
+hElement.appendChild(hText);
+document.getElementById('showSpace').appendChild(hElement)
+
+// FUNCTIONS CAN BE CALLED LIKE OBJECTS
+function fIsObj(recipient) {
+	console.log( 'Hello ' + recipient);
+	//  var calls = "functions can be called with . like objs."
+  // document.getElementById('showSpace').appendChild(calls);
+};
+fIsObj.call(this, 'Folks'); // this is context
+
+// FUNCTIONS USE CLOSEST SCOPE FOR A VAR
+var x = 1;
+function nearestScope(x) {
+	var x = 2;
+  console.log(x); // will log 2 since closer scope
+};
+nearestScope(x);

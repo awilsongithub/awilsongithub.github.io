@@ -1,0 +1,1090 @@
+1
+00:00:05,068 --> 00:00:06,015
+Hi.
+
+2
+00:00:06,015 --> 00:00:09,495
+In this project, we're going to building a
+to-do list application
+
+3
+00:00:09,495 --> 00:00:13,284
+called Odot, which if you can't already
+tell, is to-do backwards.
+
+4
+00:00:13,284 --> 00:00:14,990
+Super creative.
+
+5
+00:00:14,990 --> 00:00:20,160
+We're gonna be using Ruby and Ruby on
+Rails version 4.0 to get this all going.
+
+6
+00:00:20,160 --> 00:00:22,490
+This app is gonna be pretty simple to
+start with.
+
+7
+00:00:22,490 --> 00:00:27,700
+We're going to create to do lists, add
+items to them and mark them as complete.
+
+8
+00:00:28,728 --> 00:00:30,250
+As we're coding this application,
+
+9
+00:00:30,250 --> 00:00:33,090
+we're gonna be writing automated tests
+alongside it.
+
+10
+00:00:34,150 --> 00:00:38,350
+Automated tests are programs that work
+alongside our code to make
+
+11
+00:00:38,350 --> 00:00:41,330
+sure that our code does what we expect it
+to do.
+
+12
+00:00:42,340 --> 00:00:44,686
+The tools that we're going to be using to
+
+13
+00:00:44,686 --> 00:00:48,360
+write this automated tests are called
+r-spec and cucumber.
+
+14
+00:00:48,360 --> 00:00:51,920
+If you haven't already, you'll need to
+follow the setting up
+
+15
+00:00:51,920 --> 00:00:55,600
+a Ruby development environment videos, in
+order to get a ruby and
+
+16
+00:00:55,600 --> 00:00:57,890
+ruby on rails development environment set
+up.
+
+17
+00:00:57,890 --> 00:00:59,753
+We will be using the Ruby on Rails
+
+18
+00:00:59,753 --> 00:01:03,760
+virtual machine to work through everything
+in this project.
+
+19
+00:01:03,760 --> 00:01:04,919
+So let's go ahead and get started.
+
+20
+00:01:06,410 --> 00:01:09,900
+Okay, so let's get started and build our
+Rails app.
+
+21
+00:01:09,900 --> 00:01:14,260
+I'm going to assume that you have Ruby and
+Ruby On Rails installed.
+
+22
+00:01:14,260 --> 00:01:16,790
+If not, go on over and check
+
+23
+00:01:16,790 --> 00:01:21,160
+out the installing a Ruby development
+environment series.
+
+24
+00:01:21,160 --> 00:01:25,900
+In there we show you how to get up and
+running with Ruby and Ruby On Rails.
+
+25
+00:01:25,900 --> 00:01:28,040
+Now in this particular screen cast, we're
+going to
+
+26
+00:01:28,040 --> 00:01:31,480
+be using the Tree house Virtual Machine to
+code along.
+
+27
+00:01:31,480 --> 00:01:35,300
+And I'll make sure to mark where you do
+not need to type out
+
+28
+00:01:35,300 --> 00:01:36,950
+certain things if you are not using
+
+29
+00:01:36,950 --> 00:01:39,570
+the virtual machine and you've installed
+everything locally.
+
+30
+00:01:40,620 --> 00:01:42,380
+So let's go ahead and get started.
+
+31
+00:01:42,380 --> 00:01:45,810
+Now I've launched a terminal here in OS
+10.
+
+32
+00:01:45,810 --> 00:01:46,550
+If you're
+
+33
+00:01:46,550 --> 00:01:49,630
+on Windows, you can launch a command
+prompt but again, I'm
+
+34
+00:01:49,630 --> 00:01:53,390
+going to be assuming that we're working
+with the virtual machine.
+
+35
+00:01:53,390 --> 00:01:57,090
+So I have the virtual machine folder set
+up
+
+36
+00:01:57,090 --> 00:02:00,770
+in Treehouse, so I'm gonna change to the
+Treehouse directory.
+
+37
+00:02:00,770 --> 00:02:02,840
+And type Vagrant Up.
+
+38
+00:02:05,510 --> 00:02:10,570
+Vagrant Up is going to initialize and boot
+the virtual machine and then it'll be
+
+39
+00:02:10,570 --> 00:02:15,710
+able to get started.
+Okay, now that that is initialized.
+
+40
+00:02:15,710 --> 00:02:20,180
+We type vagrant ssh and we will be in.
+
+41
+00:02:20,180 --> 00:02:25,120
+These two steps, you can ignore if you are
+not using the virtual machine.
+
+42
+00:02:25,120 --> 00:02:25,590
+Okay.
+
+43
+00:02:25,590 --> 00:02:30,900
+Now, lets change to our projects directory
+and we can go ahead and
+
+44
+00:02:30,900 --> 00:02:32,950
+generate our Rails application.
+
+45
+00:02:32,950 --> 00:02:35,380
+Now, we are building a to do list
+application.
+
+46
+00:02:35,380 --> 00:02:39,040
+Lets call it, odot which is to do
+backwards.
+
+47
+00:02:39,040 --> 00:02:39,710
+Isn't that clever?
+
+48
+00:02:41,230 --> 00:02:44,710
+So type rails new odot.
+
+49
+00:02:45,930 --> 00:02:50,610
+And then Rails is going to go through and
+do a bunch of things for us.
+
+50
+00:02:50,610 --> 00:02:53,730
+Right now it's creating a skeleton Rails
+app,
+
+51
+00:02:53,730 --> 00:02:56,930
+basically a blank Ruby on Rails
+application, and
+
+52
+00:02:56,930 --> 00:02:58,480
+installing certain things inside of it.
+
+53
+00:02:59,600 --> 00:03:03,400
+So now that that's generated, let's type
+cd odot.
+
+54
+00:03:04,430 --> 00:03:05,460
+Okay here we are.
+
+55
+00:03:05,460 --> 00:03:08,110
+Now I'm gonna go ahead and launch sublime
+text two.
+
+56
+00:03:08,110 --> 00:03:11,980
+And we'll take a look around, see what
+Rail's generated for us.
+
+57
+00:03:13,140 --> 00:03:17,666
+Okay, so Sublime has launched, and I'm
+going to click File and Open.
+
+58
+00:03:17,666 --> 00:03:22,303
+So here is my home folder And I have the
+Treehouse Virtual Machine
+
+59
+00:03:22,303 --> 00:03:29,151
+in the Treehouse folder so I double click
+that and projects and here is odot.
+
+60
+00:03:29,151 --> 00:03:31,364
+So I'm gonna open that up.
+
+61
+00:03:31,364 --> 00:03:35,056
+Now even though I'm in the virtual machine
+anything that is
+
+62
+00:03:35,056 --> 00:03:39,020
+in that projects folder gets shared so I
+can access it locally.
+
+63
+00:03:40,140 --> 00:03:43,561
+So here's the Rails app that was generated
+for us.
+
+64
+00:03:43,561 --> 00:03:47,488
+Right now, using the latest version of
+Ruby On Rails,
+
+65
+00:03:47,488 --> 00:03:51,202
+so that's 4.0.1 as of the time of this
+recording.
+
+66
+00:03:51,202 --> 00:03:54,236
+As long as the first two numbers are 4.0
+we'll
+
+67
+00:03:54,236 --> 00:03:56,913
+be good to go here and you can follow
+along.
+
+68
+00:03:56,913 --> 00:04:00,869
+If it's 4.1 there may be some differences,
+and
+
+69
+00:04:00,869 --> 00:04:03,836
+go ahead and ask for help on the forum.
+
+70
+00:04:03,836 --> 00:04:06,800
+So this is something called the Gem file.
+
+71
+00:04:06,800 --> 00:04:10,950
+This is generated by default in all Ruby
+on Rails applications.
+
+72
+00:04:10,950 --> 00:04:13,130
+And it contains
+
+73
+00:04:13,130 --> 00:04:15,660
+all of the different libraries that we're
+using.
+
+74
+00:04:15,660 --> 00:04:20,069
+It uses another gem called Bundler to
+manage all of these dependencies.
+
+75
+00:04:20,069 --> 00:04:25,952
+So what it will do is lock these
+particular versions to our application.
+
+76
+00:04:25,952 --> 00:04:29,912
+Now over on the left, we have a bunch of
+different directories.
+
+77
+00:04:29,912 --> 00:04:33,281
+We have app, bing, config, and so on.
+
+78
+00:04:33,281 --> 00:04:36,210
+This is where all of our application files
+go.
+
+79
+00:04:36,210 --> 00:04:38,660
+The app directory contains applications
+
+80
+00:04:38,660 --> 00:04:40,220
+specific code.
+
+81
+00:04:40,220 --> 00:04:46,090
+So the assets directory contains our
+images, Javascript and style sheets.
+
+82
+00:04:46,090 --> 00:04:49,270
+These use the Rails asset pipeline.
+
+83
+00:04:49,270 --> 00:04:53,830
+Which means that Rails is going to
+generate all this for us on deployment.
+
+84
+00:04:53,830 --> 00:04:55,980
+Now we don't have to worry about that just
+yet,
+
+85
+00:04:55,980 --> 00:04:59,470
+but we'll go through later as we get into
+it.
+
+86
+00:04:59,470 --> 00:05:01,650
+Next up we have the controllers directory.
+
+87
+00:05:01,650 --> 00:05:03,790
+The controllers directory contains all
+
+88
+00:05:03,790 --> 00:05:06,290
+of the controllers for our application.
+
+89
+00:05:06,290 --> 00:05:10,550
+One thing we get by default is the
+application controller, and
+
+90
+00:05:10,550 --> 00:05:14,870
+that is going to be the core controller of
+the application.
+
+91
+00:05:14,870 --> 00:05:17,340
+For the most part, all of our other
+controllers are
+
+92
+00:05:17,340 --> 00:05:21,530
+going to do something called inherit from
+the application controller.
+
+93
+00:05:21,530 --> 00:05:24,140
+Which means that they get all of
+
+94
+00:05:24,140 --> 00:05:28,300
+the different methods from the application
+controller.
+
+95
+00:05:28,300 --> 00:05:29,080
+So if we want
+
+96
+00:05:29,080 --> 00:05:33,292
+something to be in every single controller
+on our site, certain
+
+97
+00:05:33,292 --> 00:05:38,320
+piece of behavior, we would put it in the
+application controller.
+
+98
+00:05:38,320 --> 00:05:42,980
+Now, in Ruby terms, this less than means
+it inherits from something.
+
+99
+00:05:42,980 --> 00:05:45,320
+So, we can see the application controller
+
+100
+00:05:45,320 --> 00:05:49,886
+inherits from action controller and this
+base call.
+
+101
+00:05:49,886 --> 00:05:54,180
+We don't need to worry about that right
+now but we'll get into it
+
+102
+00:05:54,180 --> 00:05:54,910
+at some point.
+
+103
+00:05:55,980 --> 00:06:00,330
+Helpers contain view helpers for the
+application.
+
+104
+00:06:00,330 --> 00:06:03,900
+Now, as we go through and generate
+different parts of our
+
+105
+00:06:03,900 --> 00:06:07,840
+application, what we'll be generating soon
+is a to do list.
+
+106
+00:06:07,840 --> 00:06:13,440
+Each particular piece of code that we
+generate will get its own helper.
+
+107
+00:06:13,440 --> 00:06:20,280
+If we want something, a certain piece of
+behavior to apply to all of our different
+
+108
+00:06:20,280 --> 00:06:23,580
+views, we will put that in the application
+helper.
+
+109
+00:06:23,580 --> 00:06:29,180
+Now, for the most part, helpers are going
+to be used to generate code for our views.
+
+110
+00:06:29,180 --> 00:06:33,940
+While, controller code would be used to
+generate behavior for our controllers.
+
+111
+00:06:35,700 --> 00:06:38,810
+Mailers contained different mailers for
+our application.
+
+112
+00:06:38,810 --> 00:06:43,650
+So, if we wanna make a to-do list mailer.
+Get mails out our to-do list of people.
+
+113
+00:06:43,650 --> 00:06:46,210
+That will go in the mailer's directory.
+
+114
+00:06:46,210 --> 00:06:47,850
+Right now it's empty.
+
+115
+00:06:47,850 --> 00:06:51,590
+We have this dot key file, which is there
+in case
+
+116
+00:06:51,590 --> 00:06:55,890
+we check this into version control using
+get, which we will do.
+
+117
+00:06:57,560 --> 00:07:01,360
+Our model's directly will contain all our
+different models.
+
+118
+00:07:01,360 --> 00:07:05,560
+Concerns directory contains something
+called concerns.
+
+119
+00:07:05,560 --> 00:07:09,120
+Which is going to be shared behavior
+between models.
+
+120
+00:07:10,260 --> 00:07:11,260
+And our views directory
+
+121
+00:07:11,260 --> 00:07:16,460
+contains the layouts for our application.
+Rails generates a default layout for us,
+
+122
+00:07:16,460 --> 00:07:21,110
+which it stores in the
+application.html.erb template.
+
+123
+00:07:22,180 --> 00:07:27,900
+And as you can see, it looks like basic
+HTML, but there are some differences here.
+
+124
+00:07:27,900 --> 00:07:29,559
+We've got the style sheet link tag,
+
+125
+00:07:29,559 --> 00:07:32,660
+these JavaScript link tags, and different
+code there.
+
+126
+00:07:33,720 --> 00:07:36,300
+When you see these tags right here, the
+less
+
+127
+00:07:36,300 --> 00:07:38,610
+than, percent, and equals.
+
+128
+00:07:38,610 --> 00:07:41,690
+That means it's calling a helper, or
+evaluating some sort
+
+129
+00:07:41,690 --> 00:07:46,090
+of code, and then displaying the results
+of the code.
+
+130
+00:07:46,090 --> 00:07:49,800
+Now if you didn't see the equal sign, that
+means
+
+131
+00:07:49,800 --> 00:07:53,140
+that the output of the code would not be
+there.
+
+132
+00:07:53,140 --> 00:07:57,670
+It would simply be evaluated inside the
+context of the template.
+
+133
+00:07:58,950 --> 00:08:01,310
+If you ever run into an issue where you
+can't figure
+
+134
+00:08:01,310 --> 00:08:04,450
+out why you are not able to see certain
+code.
+
+135
+00:08:04,450 --> 00:08:08,540
+It might be because you don't have the
+equal size.
+
+136
+00:08:08,540 --> 00:08:10,880
+Now, we'll see a little bit later some of
+the differences
+
+137
+00:08:10,880 --> 00:08:13,690
+between the two but for now, I am gonna
+move on.
+
+138
+00:08:15,710 --> 00:08:18,850
+The bin directory contains different
+programmatic
+
+139
+00:08:18,850 --> 00:08:21,250
+functions that we'll use with Rails.
+
+140
+00:08:21,250 --> 00:08:23,870
+Now when just generator our rails
+application
+
+141
+00:08:23,870 --> 00:08:25,470
+we used the Rails command to do
+
+142
+00:08:25,470 --> 00:08:29,040
+so, inside of the bin directory, we
+
+143
+00:08:29,040 --> 00:08:32,570
+get commands that are specific to our
+application.
+
+144
+00:08:32,570 --> 00:08:34,590
+And as we go through, and code our
+
+145
+00:08:34,590 --> 00:08:37,410
+application, we will be able to modify
+this.
+
+146
+00:08:40,260 --> 00:08:41,280
+Close these here.
+
+147
+00:08:42,760 --> 00:08:47,850
+Our config directory contains different
+configuration for our application.
+
+148
+00:08:47,850 --> 00:08:52,620
+Now the routes file, this is all commented
+out right now.
+
+149
+00:08:52,620 --> 00:08:57,080
+But this is where we tell our application
+where different parts go.
+
+150
+00:08:57,080 --> 00:09:02,700
+So let's say we wanted to go to our
+application slash to do lists.
+
+151
+00:09:02,700 --> 00:09:06,100
+We would put that directive inside the
+routes.rb file.
+
+152
+00:09:12,150 --> 00:09:17,540
+Inside of the config directory as well is
+something called our database.yml file.
+
+153
+00:09:18,780 --> 00:09:23,060
+This contains our database configuration
+for each environment.
+
+154
+00:09:23,060 --> 00:09:24,410
+When we start out coding a Rails
+
+155
+00:09:24,410 --> 00:09:28,380
+application, we start out in the
+development environment.
+
+156
+00:09:28,380 --> 00:09:30,503
+And we can see development is configured
+right here.
+
+157
+00:09:31,560 --> 00:09:37,230
+It's using the sqlite3 adapter, and it's
+saying the database is actually
+
+158
+00:09:37,230 --> 00:09:44,580
+a file, in the db directory right here,
+called development.sqlite3.
+
+159
+00:09:44,580 --> 00:09:48,200
+Now, you'll notice that that file does not
+exist yet.
+
+160
+00:09:48,200 --> 00:09:52,306
+And the reason is, we don't have anything,
+we didn't generate it.
+
+161
+00:09:52,306 --> 00:09:56,435
+But, we'll go through and do that shortly.
+We also have this
+
+162
+00:09:56,435 --> 00:10:02,810
+config/application.rb.
+The application configuration contains
+
+163
+00:10:02,810 --> 00:10:07,440
+very specific configuration code, for our
+application.
+
+164
+00:10:07,440 --> 00:10:13,620
+And this is going to be, for global
+settings in our application.
+
+165
+00:10:13,620 --> 00:10:16,140
+Now, if we wanted to have specific
+settings that
+
+166
+00:10:16,140 --> 00:10:20,210
+came with plugins, we could put them in
+initializers.
+
+167
+00:10:20,210 --> 00:10:25,110
+Now we do have some configuration options
+that are commented out for us.
+
+168
+00:10:25,110 --> 00:10:28,210
+This is where you can do things like add
+to the
+
+169
+00:10:28,210 --> 00:10:32,720
+load path, change the time zone, and a
+bunch of different stuff.
+
+170
+00:10:32,720 --> 00:10:36,350
+We can check out the Rails documentation
+for more configuration options.
+
+171
+00:10:36,350 --> 00:10:38,859
+For the most part we're not gonna need to
+worry about it right now.
+
+172
+00:10:40,350 --> 00:10:45,410
+And as I said before we have different
+environments which we configured here.
+
+173
+00:10:45,410 --> 00:10:49,898
+We can even do further configuration
+environmentally specifically.
+
+174
+00:10:49,898 --> 00:10:53,640
+Now, all of these different options we
+have
+
+175
+00:10:53,640 --> 00:10:57,220
+in the development environment right here.
+
+176
+00:10:57,220 --> 00:11:00,520
+We could put in the application
+configuration, if
+
+177
+00:11:00,520 --> 00:11:03,160
+we wanted them to apply to every
+environment.
+
+178
+00:11:03,160 --> 00:11:07,150
+In general, we want to keep these as
+environmentally specific as possible.
+
+179
+00:11:12,140 --> 00:11:17,470
+Now one more thing, the locales directory
+contains translation information.
+
+180
+00:11:18,760 --> 00:11:24,160
+So, if we wanted to translate our
+application into another language,
+
+181
+00:11:24,160 --> 00:11:29,950
+we would have the translation keys right
+here, and then if we
+
+182
+00:11:29,950 --> 00:11:35,695
+wanted to translate, we would call this
+I18n method .T and hello.
+
+183
+00:11:36,820 --> 00:11:37,170
+And then if
+
+184
+00:11:37,170 --> 00:11:40,400
+we were using a different locale we would
+call it like this.
+
+185
+00:11:40,400 --> 00:11:42,276
+And we can define all of that in here.
+
+186
+00:11:42,276 --> 00:11:46,984
+We're not gonna worry about that in this
+project.
+
+187
+00:11:46,984 --> 00:11:48,990
+Okay, so we'll close the config directory.
+
+188
+00:11:48,990 --> 00:11:53,410
+The lib directory contains different
+library code for our application.
+
+189
+00:11:53,410 --> 00:11:56,200
+And that is application specific.
+
+190
+00:11:56,200 --> 00:12:00,090
+So if we have written a different time
+library or something
+
+191
+00:12:00,090 --> 00:12:03,500
+crazy like that we could keep that in the
+lib directory.
+
+192
+00:12:03,500 --> 00:12:05,780
+It also contains tasks.
+
+193
+00:12:05,780 --> 00:12:08,910
+These are rate tasks which work with our
+application.
+
+194
+00:12:08,910 --> 00:12:10,580
+Not something we're going to need to worry
+about right now.
+
+195
+00:12:11,920 --> 00:12:14,848
+Our log directory contains the logs to our
+application
+
+196
+00:12:14,848 --> 00:12:17,300
+which is going to be very useful when
+debugging.
+
+197
+00:12:17,300 --> 00:12:20,336
+Now we haven't started this application
+just yet.
+
+198
+00:12:20,336 --> 00:12:22,490
+But once we do, we will see a log, and
+
+199
+00:12:22,490 --> 00:12:26,216
+then since we're in the development
+environment, we would see development.log.
+
+200
+00:12:26,216 --> 00:12:28,839
+If we were in the test or production
+environments,
+
+201
+00:12:28,839 --> 00:12:32,190
+we would have similarly named files as
+well, per environment.
+
+202
+00:12:34,290 --> 00:12:38,340
+The public directory contains a few
+different files right now.
+
+203
+00:12:38,340 --> 00:12:43,060
+This is our 404, 422, and 500 pages, in
+
+204
+00:12:43,060 --> 00:12:46,920
+case there are errors, or a file is not
+found.
+
+205
+00:12:46,920 --> 00:12:51,610
+So here is the default 500 page when
+there's an error in the application.
+
+206
+00:12:51,610 --> 00:12:53,470
+You can see the CSS is right in line.
+
+207
+00:12:54,650 --> 00:12:59,470
+The reason that these are static files is
+so that we don't have to worry about any
+
+208
+00:12:59,470 --> 00:13:01,970
+other application code running if we have
+already have an issue.
+
+209
+00:13:04,190 --> 00:13:06,840
+Now, it used to be previous versions of
+Rails,
+
+210
+00:13:06,840 --> 00:13:10,218
+we would have public images, JavaScripts
+and style sheets.
+
+211
+00:13:10,218 --> 00:13:13,745
+If you are using the asset pipeline, you
+don't need to worry about that.
+
+212
+00:13:13,745 --> 00:13:19,050
+You wanna put your applicaiton in specific
+assets like JavaScripts and all that.
+
+213
+00:13:19,050 --> 00:13:22,880
+Right here inside the app assets directory
+and then we call them later.
+
+214
+00:13:25,370 --> 00:13:27,110
+Finally we have this test directory.
+
+215
+00:13:28,260 --> 00:13:30,720
+We're not going to be using test unit in
+this project.
+
+216
+00:13:30,720 --> 00:13:34,800
+We're going to be using something called
+rspec to do our testing.
+
+217
+00:13:34,800 --> 00:13:37,560
+Testing is a pretty important of Rails and
+we'll see how to do that later.
+
+218
+00:13:39,040 --> 00:13:41,400
+And for right now, that's about all we
+need to
+
+219
+00:13:41,400 --> 00:13:43,900
+worry about, so that's a little walk
+through of the application.
+
+220
+00:13:45,440 --> 00:13:48,230
+Now let's go ahead and make sure that this
+runs.
+
+221
+00:13:48,230 --> 00:13:51,420
+So, the way we do that is by calling Rails
+server.
+
+222
+00:13:52,590 --> 00:13:59,020
+So I'm going to clear my screen right
+here, [SOUND] and type bin/rails because
+
+223
+00:13:59,020 --> 00:14:06,850
+we're wanting to use the specific Rails
+tied to our application, and then server.
+
+224
+00:14:08,970 --> 00:14:13,510
+Okay, so once the Rail server is running,
+we can get to that by
+
+225
+00:14:13,510 --> 00:14:17,820
+opening up our web browser.
+I'm using Chrome here, but any web browser
+
+226
+00:14:17,820 --> 00:14:25,798
+will do.
+And we can go to localhost port 3,000.
+
+227
+00:14:25,798 --> 00:14:30,000
+Okay, this looks good.
+We're riding ruby on rails.
+
+228
+00:14:30,000 --> 00:14:34,140
+In our next screen cast, what we're gonna
+do is generate our to-do
+
+229
+00:14:34,140 --> 00:14:36,040
+list scaffold and start working with it.
+
